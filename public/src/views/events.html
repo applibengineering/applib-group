@@ -1,0 +1,123 @@
+<section class="banner">
+    <div class="flex-container">
+        <div class="flex-item-left page-color">
+            <h2>Welcome to the </h2>
+            <h2>Application Library</h2>
+            <h2>Engineering Group Events</h2>
+        </div>
+
+        <div class="flex-item-right page-color">
+            <img src="{{img.prizebanner}}" alt="events" width="100%">
+        </div>
+  </div>
+</section>
+<div class="container">
+    <div class="row lib">
+      <div class="col-sm-8">
+        <div class="event-header">
+          <h1 class="all-events">ALL <span class="blue-event">EVENTS</span></h1>
+        </div>
+        <hr>
+        <span class="border-lib"></span>
+        <div class="row">
+          <div class="col-sm-4 card-rows">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" ng-model="eventsFilter">
+              <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                      <i class="fa fa-search"></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-sm-2 card-rows">
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Any Day
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+                <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 card-rows">
+            <div class="dropdown show">
+              <a class="btn btn-primary dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Category
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+                <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-sm-3">
+              <a class="filter-reset" href="#" aria-expanded="true">
+                Reset Filters
+              </a>
+          </div> -->
+        </div>
+        <hr>
+
+        
+      <!-- cards for all events -->
+
+      <div class="card" ng-repeat="r in result| filter:eventsFilter"  ng-controller="eventController">
+        <a href="#!event-description/{{r.id}}"  class="event-detail-page" ng-click="myFunction($index)">
+          <div class="card-body">
+              <div class="clearfix">
+                <img src="{{img.shareImg}}" class="img2" alt="share">
+                <img src="{{img.favouriteImg}}" class="img2" alt="favourite">
+                <h1 ng-bind-html="r.name"></h1>
+              </div>
+              <div class="clearfix .body-info ">
+                <img ng-src="{{eventImg[$index].imgName}}" id="eventImages" class="img2" alt="detail" width="230px">
+                <h2 class="date-event">{{r.local_date}}, {{r.local_time}}</h2>
+                <p ng-bind-html="r.description | limitTo:'163'"></p>
+              </div>
+              <div class="clearfix">
+                <!-- <h2 class="speaker">Speakers</h2>
+                <img src="{{img.eventsDetailImg}}" alt="speaker" width="100px"> -->
+              </div>
+              <div class="clearfix">
+                <img src="{{img.onlineEventsImg}}" alt="online-events" class="online-events">
+                <!-- <p>Online event</p> -->
+                <button type="button" class="btn btn-primary register-button" ng-disabled="true">Register</button>
+                <a href="javascript:void(0)" class="img2">{{r.yes_rsvp_count}} Registered</a>
+              </div>
+          </div>
+        </a>
+      </div>
+
+      </div>
+
+
+      <!-- Right side events -->
+
+      <div class="col-sm-4 right-sidebar" ng-controller="popularEventController">
+          <div class="event-header">
+            <h1 class="all-events">Popular <span class="blue-event"> Events</span></h1>
+            <hr>
+            <span class="border-lib"></span>
+          </div>
+
+          <!-- <div class="card" style="width:290px" ng-repeat="r in result | filter:eventsFilter  | orderBy: '-yes_rsvp_count'" > -->
+            <div class="card" style="width:290px" ng-repeat="p in popularData | filter:eventsFilter | orderBy: '-yes_rsvp_count'" >
+            <img class="card-img-top" ng-src="{{eventImg[$index].imgName}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">{{p.name}}</h4>
+              <p class="card-text">{{p.local_date}}, {{p.local_time}}</p>
+              <hr  class="side-bar">
+              <a href="javascript:void(0)">{{p.yes_rsvp_count}} Registered   </a>
+              <button type="button" class="btn btn-primary stretched-link" ng-disabled="true"> Register</button>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+

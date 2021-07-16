@@ -1,0 +1,403 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* MY CODE */
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    
+    /* text-align: center; */
+}
+
+
+
+
+.flex-item-left{
+    background-color: #eceff1;
+    padding: 80px;
+    flex: 50%;
+}
+
+.page-color{
+    background-color: #c7dff3;
+  
+}
+
+.page-color h2{
+    font-size: 35px;
+    line-height: 55px;
+    font-weight: 700;
+} 
+
+.row.content {height: 1500px}
+    
+/* Set gray background color and 100% height */
+
+
+h1.all-events {
+    padding-top: 30px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.input-group {
+    padding: 10px 0 20px 0;
+}
+
+.dropdown.show {
+    padding: 0 0 20px 0;
+}
+
+a#dropdownMenuLink {
+    width: 100%;
+}
+
+.dropdown-menu.show {
+    width: 100%;
+    text-align: center;
+}
+
+.img2 {
+    float: right;
+  }
+  
+  .clearfix {
+    overflow: auto;
+    padding: 0 0 20px 0;
+  }
+
+  .clearfix .speaker{
+    padding:0 0 20px 0;
+  }
+
+  a.img2 {
+    padding: 10px 0 0 0;
+    text-decoration: none;
+}
+
+  .online-events{
+      float: left;
+  }
+
+  .register-button{
+      float: right;
+  }
+
+  .blue-event{
+      color: #007bff;
+  }
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  a.event-detail-page {
+    text-decoration: none;
+    color: black;
+}
+
+.card.ng-scope {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: black !important;
+    font-size: 0.9em !important;
+}
+/* .event-header .h1 {
+    padding-top: 30px;
+    font-size: 22px;
+    text-align: left;
+} */
+
+/* #eventImages{
+    width: 100%;
+    margin-bottom: 20px;
+} */
+
+/* h1.ng-binding {
+    font-size: 22px;
+}
+
+p.ng-binding {
+    padding: 20px 0 20px 0;
+    text-align: justify;
+}
+
+h2.date-event.ng-binding {
+    font-size: 18px;
+    color: #007bff;
+} */
+
+@media screen and (min-width:480px) {
+    h1.all-events {
+        padding-top: 30px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .container-fluid{
+        background-color: #eceff1;
+        padding: 0 80px 0 80px !important;
+    }
+    
+    .input-group {
+        padding: 10px 0 20px 0;
+    }
+
+    .filter-reset{
+        padding: 10px 0 0 0;
+    }
+    
+    .dropdown.show {
+        padding: 10px 0 0px 0;
+    }
+    
+    a#dropdownMenuLink {
+        width: 100%;
+    }
+    
+    .dropdown-menu.show {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .img2 {
+        float: right;
+      }
+      
+      .clearfix {
+        overflow: auto;
+        padding: 0 0 10px 0;
+      }
+
+
+      .clearfix h1{
+        font-size: 27px;
+        font-weight: 700;
+      }
+      .clearfix h2{
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      h1.date-event {
+        color: #007bff;
+    }
+
+      .clearfix p{
+          padding: 15px 5px 0 0;
+          line-height: 1.5em;
+      }
+    
+      .clearfix .speaker{
+        padding:0 0 20px 0;
+        font-size: 20px;
+      }  
+    
+      a.img2 {
+        padding: 10px 20px 0 0;
+    }
+    
+      .online-events{
+          float: left;
+          width: 30px;
+          padding: 10px 0 0 0;
+
+      }
+
+      .online-events-info{
+          padding: 10px 0 0 10px;
+      }
+    
+      .register-button{
+          float: right;
+      }
+
+      .col-sm-4.card-rows{
+          padding-bottom: 0px;
+      }
+      .col-sm-3.card-rows{
+        padding-bottom: 0px;
+      }
+      .col-sm-3.card-rows{
+        padding-bottom: 0px;
+      }
+
+      a.event-detail-page {
+        text-decoration: none;
+        color: black;
+    }
+
+    .card.ng-scope {
+        margin-bottom: 20px;
+    }
+
+    .event-header h1 {
+        padding-top: 30px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .col-sm-4.right-sidebar{
+        padding-left: 40px !important;
+    }
+/* 
+    a.btn.btn-primary.stretched-link {
+        float: right;
+        clear: left;
+        margin-top: -10px;
+    } */
+    button.btn.btn-primary.stretched-link {
+        float: right;
+        clear: left;
+        margin-top: -10px;
+    }
+
+    .col-sm-4.card-rows {
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+
+    .col-sm-2.card-rows {
+        padding-right: 0px;
+    }
+
+    .fa-search{
+        color: #c7dff3;
+    }
+
+    p.ng-binding {
+        padding: 0 10px 0 0;
+    }
+
+    .header-title{
+        background-color: white;
+    }
+    .card-title {
+        color: black !important;
+        font-size: 0.9em !important;
+    }
+
+    .side-bar{
+          padding: 0;
+    }
+
+    .lib{
+        position: relative;
+    }
+
+    .border-lib {
+        color: black;
+        border: 2px solid black;
+        position: absolute;
+        top: 70px;
+        width: 140px;
+    }
+ 
+}  
+
+@media screen and (max-width:800px){
+    .flex-container{
+        flex-direction:column;
+    }
+}

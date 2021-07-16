@@ -1,0 +1,102 @@
+<div class="container header-title" ng-controller="eventDescController">
+    <div class="row">
+      <div class="col-sm-10">
+        <h1 class="header-name">{{finalData.name}}</h1>
+      </div>
+      <div class="col-sm-2">
+        <img src="./src/images/share_34.png" class="img2" alt="share">
+        <a href="javascript:void(0)" id="bookmarkme" rel="sidebar"><img src="./src/images/favourite_34.png" class="img2" alt="favourite"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="date-event">{{finalData.local_date}} {{finalData.local_time}}</h2>
+        <a href="javascript:void(0)" ng-disabled="true">Past</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <span><img src="./src/images/online_event_48.png" alt="online-events"></span>
+        
+      </div>
+      <div class="col-sm-3">
+        <div class="clearfix">
+          <a href="javascript:void(0)">{{finalData.yes_rsvp_count}} Registered</a>
+          <button class="btn btn-primary" ng-disabled="true">Register</button>
+        </div>
+      </div>
+    </div>
+    
+</div>
+<div class="container wrapper-color">
+ <div class="row">
+   <div class="col-sm-7">
+    <div class="wrapper-body">
+      <img ng-src="{{eventImg[i].imgName}}" alt="">
+      <h1 class="event-header">About this Event</h1>
+      <p ng-bind-html="finalData.description"></p>
+      <div class="youtube-event-video">
+        <h1>Video</h1>
+        <iframe width="300" height="200" ng-src="{{videoSrc[i].videoUrl}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+   </div>
+   <div class="col-sm-5">
+    <div class="wrapper-right">
+      <h1>Agenda</h1>
+      <h2>{{description[i].descDate}}</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+         <h1 class="time-data">05:00</h1>
+         <h2 class="sub-time-data">05:15</h2>
+         <span class="divider"></span>
+      </div>
+      <div class="col-sm-8">
+         <h1 class="strategy">Topic</h1>
+         <p>{{description[i].descName}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 side-nav">
+         <h1 class="time-data">05:15</h1>
+         <h2 class="sub-time-data">05:45</h2>
+         <span class="divider-blue"></span>
+      </div>
+      <div class="col-sm-8">
+         <h1 class="strategy">Introduction</h1>
+         <p>{{description[i].descIntro}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 side-nav">
+         <h1 class="time-data">05:45</h1>
+         <h2 class="sub-time-data">06:00</h2>
+         <span class="divider"></span>
+      </div>
+      <div class="col-sm-8">
+         <h1 class="strategy">Speaker</h1>
+         <p>{{description[i].descSpeaker}}</p>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="speaker">
+        <h1>Speaker</h1>
+        <img src="./src/images/default-photo.png" alt="">
+        
+        <img src="./src/images/default-photo.png" alt="">
+        <img src="./src/images/default-photo.png" alt="">
+        <img src="./src/images/default-photo.png" alt="">
+      </div>
+    </div> -->
+    <div class="row photosRow">
+      <h1>Photos</h1>
+      <div class="event-photos">
+
+        <img ng-src={{eventImg[i].imgName}} alt="">
+
+      </div>
+    </div>
+   </div>
+ </div>
+</div>

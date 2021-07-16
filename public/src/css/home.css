@@ -1,0 +1,494 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+.hr-class{
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:15px;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* // MY CODE */
+
+.home-page-color{
+    background-color: #f8eace;
+  
+}
+
+.home-page-color h2{
+    font-size: 35px;
+    line-height: 55px;
+    font-weight: 700;
+} 
+
+.home-page-color h3{
+    font-size: 25px;
+    line-height: 55px;
+} 
+
+.home-page-color img{
+    padding: 20px 0;
+}
+
+.library-header h2 {
+    font-size: 30px;
+    padding: 45px 0 10px 0;
+}
+
+.blue-color{
+    color: #007bff;
+}
+
+.card-text{
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.card-text-head{
+    font-size: 0.7em;
+    color: grey;
+    padding: 0 0 10px 0;
+}
+
+.card-title{
+    color: #007bff;
+}
+
+.col-sm-4{
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.col-sm-12{
+    position: relative;
+    padding-bottom: 40px;
+}
+.verified-dev{
+    position:absolute;
+    font-size: 0.7em;
+    bottom: 20px;
+    padding: 0 0 0 5px;
+    color: gray;
+}
+
+.learnMore{
+    position: absolute;
+    font-size: 0.7em;
+    bottom: 20px;
+    right: 25px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 15px;
+}
+
+.card-event-title{
+    font-size: small;
+}
+
+.card-event-head{
+    font-size: 0.7em;
+    color: grey;
+    padding: 15px 0;
+}
+
+.registered{
+    font-size: 0.9em;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.learn-more{
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 14px;
+    right: 25px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.online-events-img img{
+    padding-top: 190px;
+}
+
+.past-event{
+    color: gray;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0 0 15px 0;
+}
+
+h4.past-event-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 0 62px 0 0;
+}
+
+p.speaker-name {
+    padding: 20px 0 10px 0;
+    color: gray;
+    font-weight: 600;
+}
+
+.eve-img img{
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+}
+
+.eve-share-img img{
+    position: absolute;
+    right: 50px;
+    bottom: 2px;
+}
+
+.founding-header{
+    text-align: center;
+    font-size: 30px;
+}
+
+.founding-header h2{
+    padding: 45px 0 20px 0;
+}
+
+.founding-image{
+    width: 100%;
+    padding: 30px;
+}
+
+.founding-image img{
+    width: 100%;
+    background-color: white;
+}
+
+.white{
+    background-color: white;
+}
+
+.yellow{
+    background-color: #f8eace;
+}
+
+
+@media screen and (min-width:480px){
+
+    .home-page-color{
+        background-color: #f8eace;
+      
+    }
+    
+    .home-page-color h2{
+        font-size: 35px;
+        line-height: 55px;
+        font-weight: 700;
+    } 
+    
+    .home-page-color h3{
+        font-size: 25px;
+        line-height: 55px;
+    } 
+    
+    .home-page-color img{
+        padding: 20px 0;
+    }
+    
+    .library-header h2 {
+        font-size: 30px;
+        padding: 45px 0 10px 0;
+    }
+    
+    .blue-color{
+        color: #007bff;
+    }
+    
+    .card-text{
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+    
+    .card-text-head{
+        font-size: 0.7em;
+        color: grey;
+        padding: 0 0 10px 0;
+    }
+    
+    .card-title{
+        color: #007bff;
+    }
+    
+    .col-sm-4{
+        position: relative;
+        padding-bottom: 40px;
+    }
+    
+    .col-sm-12{
+        position: relative;
+        padding-bottom: 40px;
+    }
+    .verified-dev{
+        position:absolute;
+        font-size: 0.7em;
+        bottom: 20px;
+        padding: 0 0 0 5px;
+        color: gray;
+    }
+    
+    .learnMore{
+        position: absolute;
+        font-size: 0.7em;
+        bottom: 20px;
+        right: 25px;
+        color: #007bff;
+        font-weight: 600;
+    }
+    
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #cccccc;
+        margin: 1em 0;
+        padding: 15px;
+    }
+    
+    .card-event-title{
+        font-size: small;
+    }
+    
+    .card-event-head{
+        font-size: 0.7em;
+        color: grey;
+        padding: 15px 0;
+    }
+    
+    .registered{
+        font-size: 0.9em;
+        color: #007bff;
+        font-weight: 600;
+    }
+    
+    .learn-more{
+        position: absolute;
+        font-size: 0.8em;
+        bottom: 14px;
+        right: 25px;
+        color: #007bff;
+        font-weight: 600;
+    }
+    
+    .online-events-img img{
+        padding-top: 190px;
+    }
+
+    .past-event{
+        color: gray;
+        font-size: 0.9em;
+        font-weight: 600;
+        padding: 0 0 15px 0;
+    }
+
+    h4.past-event-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        padding: 0 62px 0 0;
+    }
+
+    p.speaker-name {
+        padding: 20px 0 10px 0;
+        color: gray;
+        font-weight: 600;
+    }
+
+    .eve-img img{
+        position: absolute;
+        right: 10px;
+        bottom: 2px;
+    }
+
+    .eve-share-img img{
+        position: absolute;
+        right: 50px;
+        bottom: 2px;
+    }
+
+    .founding-header{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .founding-header h2{
+        padding: 45px 0 20px 0;
+    }
+
+    .founding-image{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .founding-image img{
+        width: 100%;
+        background-color: white;
+    }
+    
+    .white{
+        background-color: white;
+    }
+
+    .yellow{
+        background-color: #f8eace;
+    }
+
+    
+
+    .libraries-color{
+        position: relative;
+    }
+
+    .border-color-lib{
+         
+        color: black;
+        border: 2px solid black;
+        position: absolute;
+        top: 104px;
+        width: 210px;
+        
+    }
+
+    .border-color-event{
+         
+        color: black;
+        border: 2px solid black;
+        position: absolute;
+        top: 104px;
+        width: 228px;
+        
+    }
+
+    .border-color-upcoming{
+         
+        color: black;
+        border: 2px solid black;
+        position: absolute;
+        top: 104px;
+        width:  330px;
+        
+    }
+
+    
+    .border-color-past{
+        color: black;
+        border: 2px solid black;
+        position: absolute;
+        top: 104px;
+        width: 150px;
+    }
+}
+
+
+
+/* .libraries-color{
+    background-color: white;
+} */

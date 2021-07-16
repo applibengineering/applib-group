@@ -1,0 +1,172 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.divider{
+    border: 4px solid orange;
+    background-color: orange;
+    height: 68px;
+    position: absolute;
+    top: 3px;
+    right: 15px;
+}
+
+.divider-blue{
+    border: 4px solid #007bff;
+    background-color: #007bff;
+    height: 68px;
+    position: absolute;
+    top: 3px;
+    right: 15px;
+}
+
+/* MY CODE */
+
+#btnScrolltoTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e62739;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+#btnScrolltoTop:active{
+    background: #cc2333;
+}
+
+/* .main-page{
+    padding-top: 100px;
+} */
+.footer{
+    background-color: #2B3856;
+    padding: 40px 0px;
+    margin-top: 5px;
+}
+.footer .login_1 .footer_img{
+    text-align: center;
+    justify-content: center;
+}
+.footer .footer_socialicons{
+    text-align: center;
+}
+.footer .footer_socialicons ul li{
+    display: inline-block;
+    margin-top: 15px;
+}
+.footer .footer_socialicons ul li img{
+    width: 55px;
+}
+
+.footer p{
+    font-size: 20px;
+    margin-top: 5px;
+    color:#ffffff;
+    margin-top: 35px;
+    text-align: center;
+}
