@@ -35,15 +35,6 @@ allEvents(undefined, (error, data) => {
 
  })
 
-
-    //  photosByeventId(undefined, (error, data) => {
-    //   console.log('error', error);
-    //   console.log( data);
-    //   let [eventPhotoById] = data.data;
-
-    //   console.log(eventPhotoById)
-
-    // })
  
  
  app.get('/api/v1/events', (req, res) => {
