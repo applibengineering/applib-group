@@ -7,13 +7,13 @@ app.controller('mainController', function($scope){
     $scope.mainImg ={
         logo: './src/images/footer/logo_white-02.png',
         fb: './src/images/footer/fb_icon.png',
-        github: './src/images/footer/github.png',
+        github: './src/images/footer/github_icon.png',
         linkedin: './src/images/footer/linkedin_icon.png',
         medium: './src/images/footer/medium.png',
         meetup: './src/images/footer/meetup.png',
-        slack: './src/images/footer/slack.png',
-        youtube:'./src/images/footer/youtube_icon.png'
-
+        slack: './src/images/footer/slack_icon.png',
+        youtube:'./src/images/footer/youtube_icon.png',
+        twitter:'./src/images/footer/twitter.png'
     }
 })
 
