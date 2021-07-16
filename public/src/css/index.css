@@ -170,3 +170,9 @@ input, select {
     margin-top: 35px;
     text-align: center;
 }
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: grey;
+    border-color: grey;
+}
