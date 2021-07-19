@@ -57,7 +57,29 @@ const eventControllerFunction = function($scope, $http, $log){
      $scope.myFunction = function(element){
         localStorage.setItem('el', element);
     }
+    
+    $scope.loveIcon = 'chnageColor';
+    $scope.shareIcon = 'shareColor';
 
+    $scope.onIconClick = function(iconElement){
+        
+        if($scope.loveIcon === 'chnageColor'){
+            $scope.loveIcon = 'chnageToRed'
+            localStorage.setItem('eventI', iconElement)
+        }else{
+            $scope.loveIcon  = 'chnageColor'
+        }
+    }
+    
+    $scope.onShareClick = function(){
+        if($scope.shareIcon === 'shareColor'){
+            $scope.shareIcon = 'blue'
+        }else{
+            $scope.shareIcon = 'shareColor'
+        }
+    }
+    
+ 
     
 };
 

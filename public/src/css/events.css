@@ -395,18 +395,55 @@ h2.date-event.ng-binding {
         width: 140px;
     }
 
-    i.fa.fa-share {
+    /* i.fa.fa-share {
         float: right;
         font-size: larger;
         padding-left: 10px;
         color: grey;
-    }
+        position: absolute;
+        right: 20px;
+        top: 23px;
+    } */
 
-    i.fa.fa-heart {
+    i.fa.fa-heart.chnageColor {
         float: right;
         font-size: larger;
-        /* color: #e62739; */
         color: grey;
+        position: absolute;
+        right: 48px;
+        top: 24px;
+
+
+    }
+
+    i.fa.fa-heart.chnageToRed{
+        color: #e62739;
+        float: right;
+        font-size: larger;
+        position: absolute;
+        right: 48px;
+        top: 24px;
+    }
+            /* color: #e62739; */
+    
+    i.fa.fa-share.shareColor{
+        float: right;
+        font-size: larger;
+        padding-left: 10px;
+        color: grey;
+        position: absolute;
+        right: 20px;
+        top: 23px;
+    }
+
+    i.fa.fa-share.blue{
+        float: right;
+        font-size: larger;
+        padding-left: 10px;
+        color: #007bff;
+        position: absolute;
+        right: 20px;
+        top: 23px;
     }
 
 

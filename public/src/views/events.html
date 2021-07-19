@@ -68,13 +68,15 @@
       <!-- cards for all events -->
 
       <div class="card" ng-repeat="r in result| filter:eventsFilter | filter:'!Test'"  ng-controller="eventController">
-        <a href="#!event-description/{{r.id}}"  class="event-detail-page" ng-click="myFunction($index)">
+        <div>
+          <i class="fa fa-share" class="img2"  ng-class="shareIcon" data-toggle="tooltip" data-placement="top" title="Click to share it" ng-click='onShareClick($index)'></i>
+          <i class="fa fa-heart" class="img2"  ng-class="loveIcon" ng-click='onIconClick($index)' data-toggle="tooltip" data-placement="top" title="Click to add in favourite"></i>
+          <a href="#!event-description/{{r.id}}"  class="event-detail-page" ng-click="myFunction($index)" >
           <div class="card-body">
               <div class="clearfix">
                 <!-- <img src="{{img.shareImg}}" class="img2" alt="share"> -->
                 <!-- <img src="{{img.favouriteImg}}" class="img2" alt="favourite"> -->
-                <i class="fa fa-share" class="img2"></i>
-                <i class="fa fa-heart" class="img2"></i>
+
                 <h1 ng-bind-html="r.name"></h1>
               </div>
               <div class="clearfix .body-info ">
@@ -93,7 +95,8 @@
                 <a href="javascript:void(0)" class="img2">{{r.yes_rsvp_count}} Registered</a>
               </div>
           </div>
-        </a>
+          </a>
+        </div>
       </div>
 
       </div>
