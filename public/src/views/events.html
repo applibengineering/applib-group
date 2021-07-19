@@ -107,7 +107,7 @@
           </div>
 
           <!-- <div class="card" style="width:290px" ng-repeat="r in result | filter:eventsFilter  | orderBy: '-yes_rsvp_count'" > -->
-            <div class="card" style="width:290px" ng-repeat="p in popularData | filter:eventsFilter | filter:'!Test' | orderBy: '-yes_rsvp_count'" >
+          <div class="card" style="width:290px" ng-repeat="p in popularData | filter:eventsFilter | filter:'!Test' | orderBy: '-yes_rsvp_count'" >
             <img class="card-img-top" ng-src="{{eventImg[$index].imgName}}" alt="Card image" style="width:100%">
             <div class="card-body">
               <h4 class="card-title">{{p.name}}</h4>
