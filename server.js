@@ -1,15 +1,4 @@
-// const express = require('express');
 
-// const app = express();
-
-
-// app.use(express.static(__dirname + '/public'));
-
-// const port = 9000;
-
-// app.listen(port, () => {
-//     console.log(`The app is running on ${port}...`)
-// })
 
 const morgan = require('morgan');
 const eventsDetail = require('./utils/eventsDetail');

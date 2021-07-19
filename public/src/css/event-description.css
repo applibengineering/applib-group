@@ -255,5 +255,9 @@ input, select {
             font-size: 25px;
     }
 
+    .agenda-sidebar {
+        padding: 10px 0 20px 0;
+    }
+
    
 }
