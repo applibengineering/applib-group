@@ -71,8 +71,10 @@
         <a href="#!event-description/{{r.id}}"  class="event-detail-page" ng-click="myFunction($index)">
           <div class="card-body">
               <div class="clearfix">
-                <img src="{{img.shareImg}}" class="img2" alt="share">
-                <img src="{{img.favouriteImg}}" class="img2" alt="favourite">
+                <!-- <img src="{{img.shareImg}}" class="img2" alt="share"> -->
+                <!-- <img src="{{img.favouriteImg}}" class="img2" alt="favourite"> -->
+                <i class="fa fa-share" class="img2"></i>
+                <i class="fa fa-heart" class="img2"></i>
                 <h1 ng-bind-html="r.name"></h1>
               </div>
               <div class="clearfix .body-info ">

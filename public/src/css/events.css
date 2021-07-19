@@ -6,6 +6,7 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
+ 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -392,6 +393,20 @@ h2.date-event.ng-binding {
         position: absolute;
         top: 70px;
         width: 140px;
+    }
+
+    i.fa.fa-share {
+        float: right;
+        font-size: larger;
+        padding-left: 10px;
+        color: grey;
+    }
+
+    i.fa.fa-heart {
+        float: right;
+        font-size: larger;
+        /* color: #e62739; */
+        color: grey;
     }
 
 
