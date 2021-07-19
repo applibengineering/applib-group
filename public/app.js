@@ -18,11 +18,11 @@ app.controller('mainController', function($scope){
 })
 
 
-app.run(function($rootScope){
-    $rootScope.myFunction = function(el){
-        $rootScope.i = el;
-    };
-})
+// app.run(function($rootScope){
+//     $rootScope.myFunction = function(el){
+//         $rootScope.i = el;
+//     };
+// })
 
 const eventControllerFunction = function($scope, $http, $log){
     $scope.img = {
@@ -34,9 +34,6 @@ const eventControllerFunction = function($scope, $http, $log){
         prizebanner: './src/images/prize720.png',
         event_image: './src/images/event_image.png'
     }
-
-    
-
 
     $scope.eventImg = [
 
@@ -55,7 +52,13 @@ const eventControllerFunction = function($scope, $http, $log){
          .then(function(response){
              const {result :[data]} = response.data;
              $scope.result = data.data;
-         })
+         });
+
+     $scope.myFunction = function(element){
+        localStorage.setItem('el', element);
+    }
+
+    
 };
 
 
@@ -126,6 +129,8 @@ const eventDescControllerFunction =  function($scope, $http, $routeParams, $sce)
              const {finalData} = response.data;
              $scope.finalData = finalData
          })
+
+         $scope.i = localStorage.getItem('el');
 };
 
 
