@@ -7,7 +7,7 @@
         </div>
 
         <div class="flex-item-right page-color">
-            <img src="{{img.prizebanner}}" alt="events" width="100%">
+            <img ng-src="{{img.prizebanner}}" alt="events" width="100%">
         </div>
   </div>
 </section>
@@ -69,8 +69,8 @@
 
       <div class="card" ng-repeat="r in result| filter:eventsFilter | filter:'!Test'"  ng-controller="eventController">
         <div>
-          <i class="fa fa-share" class="img2"  ng-class="shareIcon" data-toggle="tooltip" data-placement="top" title="Click to share it" ng-click='onShareClick($index)'></i>
-          <i class="fa fa-heart" class="img2"  ng-class="loveIcon" ng-click='onIconClick($index)' data-toggle="tooltip" data-placement="top" title="Click to add in favourite"></i>
+          <!-- <i class="fa fa-share" class="img2"  ng-class="shareIcon" data-toggle="tooltip" data-placement="top" title="Click to share it" ng-click='onShareClick($index)'></i>
+          <i class="fa fa-heart" class="img2"  ng-class="loveIcon" ng-click='onIconClick(r.id)' data-toggle="tooltip" data-placement="top" title="Click to add in favourite"></i> -->
           <a href="#!event-description/{{r.id}}"  class="event-detail-page" ng-click="myFunction($index)" >
           <div class="card-body">
               <div class="clearfix">

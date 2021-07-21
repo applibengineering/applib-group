@@ -25,6 +25,12 @@ app.controller('mainController', function($scope){
 // })
 
 const eventControllerFunction = function($scope, $http, $log){
+
+
+    $scope.state = {
+
+        bookmarks:[]
+    }
     $scope.img = {
         shareImg: './src/images/share_34.png',
         favouriteImg: './src/images/favourite_34.png',
@@ -58,26 +64,26 @@ const eventControllerFunction = function($scope, $http, $log){
         localStorage.setItem('el', element);
     }
     
-    $scope.loveIcon = 'chnageColor';
-    $scope.shareIcon = 'shareColor';
+    // $scope.loveIcon = 'chnageColor';
+    // $scope.shareIcon = 'shareColor';
 
-    $scope.onIconClick = function(iconElement){
+    // $scope.onIconClick = function(iconElement){
         
-        if($scope.loveIcon === 'chnageColor'){
-            $scope.loveIcon = 'chnageToRed'
-            localStorage.setItem('eventI', iconElement)
-        }else{
-            $scope.loveIcon  = 'chnageColor'
-        }
-    }
+    //     if($scope.loveIcon === 'chnageColor'){
+    //         $scope.loveIcon = 'chnageToRed'
+
+    //     }else{
+    //         $scope.loveIcon  = 'chnageColor'
+    //     }
+    // }
     
-    $scope.onShareClick = function(){
-        if($scope.shareIcon === 'shareColor'){
-            $scope.shareIcon = 'blue'
-        }else{
-            $scope.shareIcon = 'shareColor'
-        }
-    }
+    // $scope.onShareClick = function(){
+    //     if($scope.shareIcon === 'shareColor'){
+    //         $scope.shareIcon = 'blue'
+    //     }else{
+    //         $scope.shareIcon = 'shareColor'
+    //     }
+    // }
     
  
     

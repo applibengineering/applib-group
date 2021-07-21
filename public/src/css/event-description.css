@@ -263,5 +263,9 @@ input, select {
         margin: 60px 0 0 0;
     }
 
+    a.ng-binding {
+        text-decoration: none;
+    }
+
    
 }
