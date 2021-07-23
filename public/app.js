@@ -162,7 +162,7 @@ const eventDescControllerFunction =  function($scope, $http, $routeParams, $sce)
 };
 
 
-const homeControllerFunction = function($scope){
+const homeControllerFunction = function($scope, $http){
 
     $scope.img = {
         homeBannerImg: './src/images/home_image.png',
@@ -174,6 +174,34 @@ const homeControllerFunction = function($scope){
         favouriteImg: './src/images/favourite_34.png',
         foundingMem : './src/images/founding.png'
     }
+
+    $http.get("api/v1/events")
+    .then(function(response){
+        const {result :[data]} = response.data;
+        $scope.result = data.data;
+    });
+
+    $scope.description = [
+        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"24 June 2021"},
+        {descName:"Townhall with Applib Group", descIntro:"Learn more about Cloud Computing with Android", descSpeaker:"Rupal Shirpurkar", descDate:"27 May 2021"},
+        {descName:"Ask Me Anything about AppLib Group", descIntro:"How to Contribute to the Opensource Community", descSpeaker:"Mr. Valluri K & Mr. Santosh Yadav", descDate:"29 April 2021"},
+        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
+        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
+        {descName:"Introduction of IMPULSE 2021", descIntro:"Learn more about IMPULSE 2021", descSpeaker:"Mr. Valluri, Mr. Ratna Kishore, Mr. Janardhan Revuru , Mr. Raghu Shamanna ,Dr. Vijaya Kumar, Mr. Prashant Mishra, Mr. Sharath K S, Mr. Anupam Rath, Mr. Hari Krishnan", descDate:"25 March 2021"},
+    ]
+
+    $scope.eventImg = [
+
+       {imgName:'https://secure.meetupstatic.com/photos/event/7/f/8/d/600_496952653.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/b/9/7/c/600_496247484.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/b/3/5/c/600_495825916.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/2/4/1/f/600_495309247.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/3/a/4/5/600_496934917.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/2/4/1/f/600_495309247.jpeg'},
+       {imgName:'https://secure.meetupstatic.com/photos/event/3/a/4/5/600_496934917.jpeg'}
+
+    ];
+
 }
 
 const libraryControllerFunction = function($scope){

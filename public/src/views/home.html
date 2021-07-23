@@ -215,7 +215,21 @@
             <hr>
             <span class="border-color-past"></span>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4" ng-repeat="res in result | filter:'!Test'">
+                    <div class="card" style="width:350px">
+                        <img class="card-img-top" ng-src="{{eventImg[$index].imgName}}" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <p class="past-event">{{res.local_date}}, {{res.local_time}}</p>
+                          <h4 class="past-event-title" ng-bind-html="res.name"></h4>
+                          <p class="speaker-name">{{description[$index].descSpeaker}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="registered">{{res.yes_rsvp_count}} Registered</span>
+                            <span class="eve-img"><img ng-src="{{img.shareImg}}" alt="shareimg"></span><span class="eve-share-img"><img src="{{img.favouriteImg}}" alt="favourite"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-4">
                     <div class="card" style="width:350px">
                         <img class="card-img-top" ng-src="{{img.eventsDetailImg}}" alt="Card image" style="width:100%">
                         <div class="card-body">
@@ -242,21 +256,7 @@
                             <span class="eve-img"><img ng-src="{{img.shareImg}}" alt="shareimg"></span><span class="eve-share-img"><img src="{{img.favouriteImg}}" alt="favourite"></span>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card" style="width:350px">
-                        <img class="card-img-top" ng-src="{{img.eventsDetailImg}}" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                          <p class="past-event">23 December 2021</p>
-                          <h4 class="past-event-title">Continuous Testing: A Critical Part of the Devops process</h4>
-                          <p class="speaker-name">Speaker Name</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="registered">1,296 Attendees</span>
-                            <span class="eve-img"><img ng-src="{{img.shareImg}}" alt="shareimg"></span><span class="eve-share-img"><img src="{{img.favouriteImg}}" alt="favourite"></span>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

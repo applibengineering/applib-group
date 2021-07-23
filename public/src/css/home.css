@@ -485,6 +485,10 @@ p.speaker-name {
         top: 104px;
         width: 150px;
     }
+
+    p.past-event.ng-binding {
+        padding: 0 0 10px 0;
+    }
 }
 
 
