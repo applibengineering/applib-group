@@ -5,6 +5,7 @@ const eventsDetail = require('./utils/eventsDetail');
 const allEvents = require('./utils/allEvents');
 const photosById = require('./utils/photosById');
 const photosByeventId = require('./utils/photosByeventId');
+const repoList = require('./utils/allRepos');
 const express = require('express');
 const app = express();
 
@@ -76,6 +77,23 @@ res.send({
 })
 
 });
+
+
+// app.get('/api/v1/allrepo', (req, res) => {
+
+//   const  callback = function(response){
+
+//     res.send({
+//       status:'success',
+//       data:response
+//     })
+//     console.log(JSON.stringify(response.data));
+//    }
+
+
+//   repoList(callback)
+
+// })
 
   app.listen(port, () => {
       console.log(`app listening at http://localhost:${port}`)
