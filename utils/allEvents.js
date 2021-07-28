@@ -3,7 +3,7 @@
  const request = require('request');
 
  const allEvents = (ids, callback) => {
-    const url = `https://api.meetup.com/self/events?page=20&desc=true&f39kqd1blfsdjmt4mgf4t7kmd=e162ngvj4be1c6t76avmvv8a`;
+    const url = `https://api.meetup.com/application-library-engineering-group/events?page=20&desc=true&status=past&f39kqd1blfsdjmt4mgf4t7kmd=e162ngvj4be1c6t76avmvv8a`;
 
     request({
         url:url,
