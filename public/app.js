@@ -181,14 +181,19 @@ const homeControllerFunction = function($scope, $http){
         $scope.result = data.data;
     });
 
-    $scope.description = [
-        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"24 June 2021"},
-        {descName:"Townhall with Applib Group", descIntro:"Learn more about Cloud Computing with Android", descSpeaker:"Rupal Shirpurkar", descDate:"27 May 2021"},
-        {descName:"Ask Me Anything about AppLib Group", descIntro:"How to Contribute to the Opensource Community", descSpeaker:"Mr. Valluri K & Mr. Santosh Yadav", descDate:"29 April 2021"},
-        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
-        {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
-        {descName:"Introduction of IMPULSE 2021", descIntro:"Learn more about IMPULSE 2021", descSpeaker:"Mr. Valluri, Mr. Ratna Kishore, Mr. Janardhan Revuru , Mr. Raghu Shamanna ,Dr. Vijaya Kumar, Mr. Prashant Mishra, Mr. Sharath K S, Mr. Anupam Rath, Mr. Hari Krishnan", descDate:"25 March 2021"},
-    ]
+    $http.get('https://api.github.com/users/applibgroup/repos')
+         .then(function(response){
+            $scope.libraryData = response.data;
+         });
+
+    // $scope.description = [
+    //     {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"24 June 2021"},
+    //     {descName:"Townhall with Applib Group", descIntro:"Learn more about Cloud Computing with Android", descSpeaker:"Rupal Shirpurkar", descDate:"27 May 2021"},
+    //     {descName:"Ask Me Anything about AppLib Group", descIntro:"How to Contribute to the Opensource Community", descSpeaker:"Mr. Valluri K & Mr. Santosh Yadav", descDate:"29 April 2021"},
+    //     {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
+    //     {descName:"Introduction of HarmonyOS", descIntro:"Learn more about Harmony OS", descSpeaker:"Sharath K S", descDate:"27 May 2021"},
+    //     {descName:"Introduction of IMPULSE 2021", descIntro:"Learn more about IMPULSE 2021", descSpeaker:"Mr. Valluri, Mr. Ratna Kishore, Mr. Janardhan Revuru , Mr. Raghu Shamanna ,Dr. Vijaya Kumar, Mr. Prashant Mishra, Mr. Sharath K S, Mr. Anupam Rath, Mr. Hari Krishnan", descDate:"25 March 2021"},
+    // ]
 
     $scope.eventImg = [
 
@@ -252,6 +257,7 @@ app.controller('libraryController', libraryControllerFunction);
 app.controller('discussionController', discussionControllerFunction);
 
 app.controller('communityController', communityControllerFunction);
+
 
 //ROUTERS
 

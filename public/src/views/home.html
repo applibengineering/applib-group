@@ -11,7 +11,7 @@
         </div>
     </div>
 </section>
-<div class="container white">
+<div class="container white" ng-controller="homeController">
     <div class="row libraries-color">
         <div class="col-sm-9">
             <div class="library-header">
@@ -20,6 +20,47 @@
             <hr class="hr-class">
             <span class="border-color-lib"></span>
             <div class="row">
+                <div class="col-sm-4"  ng-repeat="lib in libraryData | limitTo: '7' | filter:'!APPLIBGROUP.GITHUB.IO'">
+                    <div class="card" style="width:260px; height: 270px; ">
+                        <div class="card-body">
+                          <h4 class="card-title">{{lib.name | uppercase}}</h4>
+                          <p class="card-text-head">{{lib.updated_at  | date:'medium'}}</p>
+                          <p class="card-text">{{lib.description | limitTo:'190'}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
+                            <a ng-href="{{lib.html_url}}" target="_blank"><span class="learnMore">Learn More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-4">
+                    <div class="card" style="width:260px">
+                        <div class="card-body">
+                          <h4 class="card-title">Title Head</h4>
+                          <p class="card-text-head">10 hours ago</p>
+                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
+                        </div>
+                        <div class="card-footer">
+                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
+                            <span class="learnMore">Learn More</span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-sm-4">
+                    <div class="card" style="width:260px">
+                        <div class="card-body">
+                          <h4 class="card-title">Title Head</h4>
+                          <p class="card-text-head">10 hours ago</p>
+                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
+                        </div>
+                        <div class="card-footer">
+                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
+                            <span class="learnMore">Learn More</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="row">
                 <div class="col-sm-4">
                     <div class="card" style="width:260px">
                         <div class="card-body">
@@ -59,48 +100,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card" style="width:260px">
-                        <div class="card-body">
-                          <h4 class="card-title">Login Module</h4>
-                          <p class="card-text-head">10 hours ago</p>
-                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
-                            <span class="learnMore">Learn More</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card" style="width:260px">
-                        <div class="card-body">
-                          <h4 class="card-title">Title Head</h4>
-                          <p class="card-text-head">10 hours ago</p>
-                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
-                            <span class="learnMore">Learn More</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card" style="width:260px">
-                        <div class="card-body">
-                          <h4 class="card-title">Title Head</h4>
-                          <p class="card-text-head">10 hours ago</p>
-                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
-                            <span class="learnMore">Learn More</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
         <div class="col-sm-3">
             <div class="library-header">
@@ -109,31 +109,16 @@
             <hr>
             <span class="border-color-event"></span>
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="card" style="width:260px">
+                <div class="col-sm-12" ng-repeat="lib in libraryData | orderBy:'-stargazers_count' | limitTo:'2'">
+                    <div class="card" style="width:260px; height: 270px;">
                         <div class="card-body">
-                          <h4 class="card-title">Title Head</h4>
-                          <p class="card-text-head">10 hours ago</p>
-                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
+                          <h4 class="card-title">{{lib.name | uppercase}}</h4>
+                          <p class="card-text-head">{{lib.updated_at  | date:'medium'}}</p>
+                          <p class="card-text">{{lib.description | limitTo:'190'}}</p>
                         </div>
                         <div class="card-footer">
                             <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
-                            <span class="learnMore">Learn More</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card" style="width:260px">
-                        <div class="card-body">
-                          <h4 class="card-title">Title Head</h4>
-                          <p class="card-text-head">10 hours ago</p>
-                          <p class="card-text">Login Module is one of the basic modules of mobile application development.In this module we will discuss about different solutions and methods available.Also share the samples to acheive login from design to code.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img ng-src="{{img.verifiedImg}}" alt="verified"><span class="verified-dev">Verified.dev</span>
-                            <span class="learnMore">Learn More</span>
+                            <a ng-href="{{lib.html_url}}" target="_blank"><span class="learnMore">Learn More</span></a>
                         </div>
                     </div>
                 </div>
@@ -153,10 +138,10 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card" style="width:260px">
-                        <img class="card-img-top" ng-src="{{img.eventsDetailImg}}" alt="Card image" style="width:100%">
+                        <img class="card-img-top" ng-src="{{img.onlineEvents}}" alt="Card image" style="width:100%">
                         <div class="card-body">
-                          <h4 class="card-event-title">Understanding and Using Collectors</h4>
-                          <p class="card-event-head">Wednesday,21 July 2021</p>
+                          <h4 class="card-event-title">Coming Soon</h4>
+                          <p class="card-event-head">Next Month</p>
                         </div>
                         <div class="card-footer">
                             <span class="registered">926 Registered</span>
@@ -166,10 +151,10 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card" style="width:260px">
-                        <img class="card-img-top" ng-src="{{img.eventsDetailImg}}" alt="Card image" style="width:100%">
+                        <img class="card-img-top" ng-src="{{img.onlineEvents}}" alt="Card image" style="width:100%">
                         <div class="card-body">
-                          <h4 class="card-event-title">Understanding and Using Collectors</h4>
-                          <p class="card-event-head">Wednesday,21 July 2021</p>
+                          <h4 class="card-event-title">Coming Soon</h4>
+                          <p class="card-event-head">Next Month</p>
                         </div>
                         <div class="card-footer">
                             <span class="registered">926 Registered</span>
@@ -179,10 +164,10 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card" style="width:260px">
-                        <img class="card-img-top" ng-src="{{img.eventsDetailImg}}" alt="Card image" style="width:100%">
+                        <img class="card-img-top" ng-src="{{img.onlineEvents}}" alt="Card image" style="width:100%">
                         <div class="card-body">
-                          <h4 class="card-event-title">Understanding and Using Collectors</h4>
-                          <p class="card-event-head">Wednesday,21 July 2021</p>
+                          <h4 class="card-event-title">Coming Soon</h4>
+                          <p class="card-event-head">Next Month</p>
                         </div>
                         <div class="card-footer">
                             <span class="registered">926 Registered</span>
