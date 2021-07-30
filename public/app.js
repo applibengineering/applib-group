@@ -37,7 +37,7 @@ const eventControllerFunction = function($scope, $http, $log){
         eventsDetailImg: './src/images/event_details_image.png',
         onlineEventsImg:'./src/images/online_event_48.png',
         eventbannerImg :'./src/images/events_page.png',
-        js_contest: './src/images/js-contest_coming-soon.JPG',
+        js_contest: './src/images/js-contest_coming-soon.jpg',
         event_image: './src/images/event_image.png'
     }
 
